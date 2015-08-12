@@ -14,8 +14,7 @@ if [ $? -eq 0 ]; then
         echo "[$(date)] The modem is operational. Uptime: $UPTIME" >> $LOG
     else
         echo "[$(date)] Modem Failure. Restarting modem. Uptime was: $UPTIME" >> $LOG
-        curl -m 5 -s $HOST/reset.htm?reset_modem="Restart Cable Modem" &>
-/dev/null
+        curl -m 5 -s $HOST/reset.htm?reset_modem="Restart Cable Modem" &> /dev/null
         echo "[$(date)] Modem restarted." >> $LOG
     fi
 else
