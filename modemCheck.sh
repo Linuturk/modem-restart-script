@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-LOG="~/.modemCheck.log"
+LOG="$HOME/.modemCheck.log"
 HOST="192.168.100.1"
 
 # Test for connectivity
